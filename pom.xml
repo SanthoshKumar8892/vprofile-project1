@@ -166,9 +166,7 @@
 		</dependency>
     </dependencies>
      <build>
-     </plugin>
-        <plugins>
-            <plugin>
+	     <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>3.6.3</version>
