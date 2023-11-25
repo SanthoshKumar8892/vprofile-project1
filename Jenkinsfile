@@ -3,7 +3,7 @@ pipeline {
     agent any
 /*
 	tools {
-        maven "Maven 3.6.3"
+        maven "maven 3.2.3"
     }
 */
     environment {
@@ -15,9 +15,6 @@ pipeline {
 
         stage('BUILD'){
             steps {
-		sh 'export M2_HOME=/opt/apache-maven-3.2.3'
-		sh 'export PATH=$PATH:$M2_HOME/bin'
-		sh 'source ~/.bashrc'
                 sh 'mvn clean install -DskipTests'
             }
             post {
