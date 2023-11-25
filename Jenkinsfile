@@ -3,12 +3,12 @@ pipeline {
     agent any
 /*
 	tools {
-        maven " Maven 3.6.3"
+        maven "Maven 3.6.3"
     }
 */
     environment {
-        registry = "imranvisualpath/vproappdock"
-        registryCredential = 'dockerhub'
+        registry = "sam8892"
+        registryCredential = 'Santhu@8892'
     }
 
     stages{
