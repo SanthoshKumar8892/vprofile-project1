@@ -169,7 +169,7 @@
 	     <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>3.6.3</version>
+                <version>9.2.11.v20150529</version>
                 <configuration>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webApp>
@@ -178,6 +178,11 @@
                 </configuration>
             </plugin>
 		<!-- CODE COVERAGE -->
+	            <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-war-plugin</artifactId>
+                     <version>3.6.3</version>
+                    </plugin>
  		    <plugin>
  		        <groupId>org.jacoco</groupId>
  		        <artifactId>jacoco-maven-plugin</artifactId>
