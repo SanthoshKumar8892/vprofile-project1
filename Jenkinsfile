@@ -94,7 +94,7 @@ pipeline {
                             nexusUrl: NEXUS_URL,
                             groupId: pom.groupId,
                             version: ARTVERSION,
-                            repository: NEXUS_REPOSITORY,
+                            repository: santhu,
                             credentialsId: NEXUS_CREDENTIAL_ID,
                             artifacts: [
                                 [artifactId: pom.artifactId,
