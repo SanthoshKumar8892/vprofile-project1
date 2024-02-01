@@ -59,13 +59,10 @@ pipeline {
             sh  "${mavenHome}/bin/mvn deploy"
         }
 	    
-                    }
-                }
+                    
             
         
 
-
-    }
 
 
 }
