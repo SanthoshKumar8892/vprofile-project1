@@ -3,15 +3,14 @@ pipeline {
 	agent any
 /*	
 	tools {
-        maven "maven3"
+        maven "MAVEN3"
     }
 */	
     environment {
-        NEXUS_VERSION = "nexus3"
+        NEXUS_VERSION = "nexus"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "172.31.90.111:8081"
         NEXUS_REPOSITORY = "santhu"
-	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
