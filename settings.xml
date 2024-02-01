@@ -10,4 +10,13 @@
       <password>admin123</password>
     </server>
     <server>
-  
+   <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <name>nexus</name>
+      <url>http://54.145.118.12:8081/#admin/repository/santhu/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+
+
