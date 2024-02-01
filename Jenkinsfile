@@ -58,8 +58,7 @@ pipeline {
         stage('UploadArtifactsIntoNexus') {
             sh  "${mavenHome}/bin/mvn deploy"
         }
-		    else {
-                        error "*** File: ${artifactPath}, could not be found";
+	    
                     }
                 }
             }
