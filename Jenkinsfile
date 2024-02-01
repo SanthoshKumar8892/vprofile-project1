@@ -94,4 +94,4 @@ NEXUS_GRP_REPO = 'vpro-maven-group'
     }
 
 
-}
+
