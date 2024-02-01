@@ -56,7 +56,9 @@ pipeline {
 
 
         stage('UploadArtifactsIntoNexus') {
-            sh  "${mavenHome}/bin/mvn deploy"
+	     steps {
+                 sh  "${mavenHome}/bin/mvn deploy"
+	     }
         }
 	    
                     
