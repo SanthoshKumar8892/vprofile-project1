@@ -1,170 +1,154 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.visualpathit</groupId>
-    <artifactId>vprofile</artifactId>
-    <packaging>war</packaging>
-    <version>v2</version>
-    <name>Visualpathit VProfile Webapp</name>
-    <url>http://maven.apache.org</url>
-    <properties>
-        <spring.version>4.2.0.RELEASE</spring.version>
-        <spring-security.version>4.0.2.RELEASE</spring-security.version>
-        <spring-data-jpa.version>1.8.2.RELEASE</spring-data-jpa.version>
-        <hibernate.version>4.3.11.Final</hibernate.version>
-        <hibernate-validator.version>5.2.1.Final</hibernate-validator.version>
-        <mysql-connector.version>5.1.36</mysql-connector.version>
-        <commons-dbcp.version>1.4</commons-dbcp.version>
-        <jstl.version>1.2</jstl.version>
-        <junit.version>4.10</junit.version>
-        <logback.version>1.1.3</logback.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.mt</groupId>
+	<artifactId>maven-web-application</artifactId>
+	<packaging>war</packaging>
+	<version>0.1.1.18</version>
+	
+	<name>maven-web-application</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+	<description>Maven Web Project for Java Project</description>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+	<organization>
+		<name>Mithun Technologies</name>
+		<url>http://mithuntechnologies.com/</url>
+	</organization>
 
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>${spring-security.version}</version>
-        </dependency>
+	<properties>
+		<jdk.version>1.8</jdk.version>
+		<spring.version>5.1.2.RELEASE</spring.version>
+		<junit.version>4.11</junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<sonar.host.url>http://13.232.33.85:9000/</sonar.host.url>
+		<sonar.login>854921c77d75914b3a30b61de66690349c34ad12</sonar.login>
+		<!-- <sonar.password>password</sonar.password> -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>${spring-security.version}</version>
-        </dependency>
+	</properties>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>${hibernate-validator.version}</version>
-        </dependency>
+	<dependencies>
+		
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20160212</version>
+		</dependency>
+		
+		<!-- test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>${spring-data-jpa.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector.version}</version>
-        </dependency>
+		<!-- compile dependencies -->
 
-        <dependency>
-            <groupId>commons-dbcp</groupId>
-            <artifactId>commons-dbcp</artifactId>
-            <version>${commons-dbcp.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-    		<groupId>org.mockito</groupId>
-    		<artifactId>mockito-core</artifactId>
-    		<version>1.9.5</version>
-    		<scope>test</scope>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-test</artifactId>
-		    <version>3.2.3.RELEASE</version>
-		    <scope>test</scope>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-web</artifactId>
+    		<version>${spring.version}</version>
+  		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
-		        <groupId>javax.servlet</groupId>
-			    <artifactId>javax.servlet-api</artifactId>
-			    <version>3.1.0</version>
-			    <scope>provided</scope>
-		</dependency>		
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-        <dependency>
-    		<groupId>org.hamcrest</groupId>
-    		<artifactId>hamcrest-all</artifactId>
-    		<version>1.3</version>
-    		<scope>test</scope>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
-    </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.2.11.v20150529</version>
-                <configuration>
-                    <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <webApp>
-                        <contextPath>/</contextPath>
-                    </webApp>
-                </configuration>
-            </plugin>
-		<!-- CODE COVERAGE -->
-		    <plugin>
-                     <groupId>org.apache.maven.plugins</groupId>
-                     <artifactId>maven-war-plugin</artifactId>
-                     <version>3.2.2</version>
-                    </plugin>
- 		    <plugin>
- 		        <groupId>org.jacoco</groupId>
- 		        <artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.4</version>
-		        <executions>
-		            <execution>
-		                <id>jacoco-initialize</id>
-		                <phase>process-resources</phase>
-		                <goals>
-		                    <goal>prepare-agent</goal>
-		                </goals>
-		            </execution>
-		            <execution>
-		                <id>jacoco-site</id>
-		                <phase>post-integration-test</phase>
-		                <goals>
-		                    <goal>report</goal>
-		                </goals>
-		            </execution>
-		        </executions>
-		</plugin>
-        </plugins>
-    </build>
-	<repositories>
-    <repository>
-      <id>${NEXUS_GRP_REPO}</id>
-      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS_GRP_REPO}/</url>
-    </repository>
-  </repositories>
+		
+		<!-- provided dependencies -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
+	</dependencies>
+	
+	<distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>santhu Technologies Releases Nexus Repository</name>
+	      <url>http://54.145.118.12:8081/repository/santhu/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>santhu Technologies Snapshot Nexus Repository </name>
+	      <url>http://54.145.118.12:8081/repository/santhu/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
+	
+	<build>
+		<finalName>maven-web-application</finalName>
+		
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.2.11.v20150529</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/maven-web-application</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+					<wtpversion>2.0</wtpversion>
+					<wtpContextName>maven-web-application</wtpContextName>
+				</configuration>
+			</plugin>
+			
+</plugins>
+	</build>
+	
+	
 </project>
