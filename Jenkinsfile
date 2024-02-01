@@ -56,7 +56,7 @@ pipeline {
 
         stage('UploadArtifactsIntoNexus') {
 	     steps {
-                 sh  "${maven3}/bin/mvn deploy"
+                 sh  "mvn clean deploy"
 	     }
         }
 	    
