@@ -6,6 +6,25 @@ pipeline {
         maven "maven3"
     }
 */	
+	   SNAP_REPO = 'vprofile-snapshot'
+
+NEXUS_USER = 'admin'
+
+NEXUS_PASS = 'admin123'
+
+RELEASE_REPO = 'santhu'
+
+CENTRAL_REPO = 'vpro-maven-central'
+
+NEXUSIP = 'http://54.145.118.12/'
+
+NEXUSPORT = '8081'
+
+NEXUS_GRP_REPO = 'vpro-maven-group'
+
+        NEXUS_LOGIN = 'nexuslogin'
+
+    }
   
 	
     stages{
@@ -53,8 +72,8 @@ pipeline {
 
           steps {
             withSonarQubeEnv('sonar-pro') {
-               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
-                   -Dsonar.projectName=vprofile-repo \
+               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=santhu \
+                   -Dsonar.projectName=santhu \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/ \
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
