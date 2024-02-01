@@ -6,7 +6,7 @@ pipeline {
         maven "maven3"
     }
 */	
-	   SNAP_REPO = 'vprofile-snapshot'
+	   SNAP_REPO = 'santhu'
 
 NEXUS_USER = 'admin'
 
