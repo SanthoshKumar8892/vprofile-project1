@@ -161,10 +161,17 @@
 		</plugin>
         </plugins>
     </build>
-	<repositories>
-    <repository>
-      <id>${NEXUS-GRP-REPO}</id>
-      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
-    </repository>
-  </repositories>
+	<distributionManagement>
+<repository>
+<id>nexus</id>
+<name>Santhu Technologies Releases Nexus Repositor</name>
+<url>http://54.145.118.12:8081/#admin/repository/santhu</url>
+</repository>
+<snapshotRepository>
+<id>nexus</id>
+<name>santhu Technologies Snapshot Nexus Repository </name>
+<url>http://localhost/repository/santhu</url>
+</snapshotRepository>
+</distributionManagement>
+
 </project>
