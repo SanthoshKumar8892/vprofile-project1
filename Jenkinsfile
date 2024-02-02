@@ -56,7 +56,7 @@ pipeline {
 
         stage('UploadArtifactsIntoNexus') {
 	     steps {
-                 sh  "mvn clean deploy"
+                 sh  "mvn clean deploy -DrepositoryId=nexus-releases"
 	     }
         }
 	    
