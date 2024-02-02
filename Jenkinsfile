@@ -67,7 +67,6 @@ pipeline {
                         nexusArtifactUploader(
                             nexusVersion: NEXUS_VERSION,
                             protocol: NEXUS_PROTOCOL,
-                            nexusUrl: http://54.145.118.12:8081/repository/santhu/,
                             version: ARTVERSION,
                             repository: santhu,
                             artifacts: [
