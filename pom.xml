@@ -163,8 +163,8 @@
     </build>
 	<repositories>
     <repository>
-      <id>santhu</id>
-      <url>http://54.145.118.12:8081/repository/santhu/</url>
+      <id>${NEXUS-GRP-REPO}</id>
+      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
     </repository>
   </repositories>
 </project>
