@@ -161,12 +161,10 @@
 		</plugin>
         </plugins>
     </build>
-	    <repositories>
+	<repositories>
     <repository>
-      <id>nexus</id>
+      <id>${NEXUS-GRP-REPO}</id>
       <url>http://54.145.118.12:8081/repository/santhu/</url>
     </repository>
   </repositories>
-    </build>
-	
 </project>
